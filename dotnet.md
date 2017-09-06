@@ -14,9 +14,25 @@ docker run -it microsoft/dotnet:latest
 ```
 
 # demo
+1
 ```
 dotnet new console -o hwapp
 cd hwapp
 dotnet run
 ```
+2
+```
+dotnet new web -o website
+cd website
+export ASPNETCORE_URLS='http://*:5000'
+dotnet run
+```
+or
 
+```
+dotnet new web -o website
+cd website
+export ASPNETCORE_URLS='http://*:5000'
+dotnet build -o app
+dotnet app/website.dll
+```
